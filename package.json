@@ -1,0 +1,40 @@
+{
+	"name": "mantra-theme-switcher",
+	"repository": "diemantra/mantra-theme-switcher",
+	"version": "0.0.3",
+	"author": "diemantra",
+	"description": "Simple react component to switch between light and dark mode",
+	"main": "dist/bundle.min.js",
+	"types": "dist/index.d.ts",
+	"type": "module",
+	"scripts": {
+		"rollup:build": "rollup -c",
+		"rollup:watch": "rollup -c -w"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"react",
+		"react-component",
+		"mantra",
+		"mantra-theme-switcher",
+		"theme",
+		"switcher",
+		"light",
+		"dark",
+		"mode"
+	],
+	"license": "MIT",
+	"devDependencies": {
+		"@rollup/plugin-node-resolve": "^15.0.1",
+		"@rollup/plugin-terser": "^0.4.0",
+		"@types/react": "^18.0.31",
+		"@types/react-dom": "^18.0.11",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"rollup": "^3.20.2",
+		"rollup-plugin-typescript2": "^0.34.1",
+		"typescript": "^5.0.3"
+	}
+}
