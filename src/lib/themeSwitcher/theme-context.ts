@@ -7,6 +7,14 @@ export interface ThemeContextProps {
 	toggleTheme: (value?: ThemeContextProps['theme']) => void;
 }
 
+/**
+ * The toggle theme should just switch between the themes by default, but it can also be used to set a specific theme.
+ * @typedef {Object} ThemeContextProps
+ * @property {'dark' | 'light'} theme - The current theme
+ * @property {boolean} isDark - Whether the current theme is dark
+ * @property {boolean} isLight - Whether the current theme is light
+ * @property {(value?: 'dark' | 'light') => void} toggleTheme - Function to toggle between the two themes
+ */
 const contextInitialState = {
 	theme: 'light',
 	isDark: false,

@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import ThemeContext, { ThemeContextProps } from './theme-context';
 
 const LOCAL_THEME = 'data-theme';
@@ -49,6 +49,37 @@ const checkLocalStorage = (): ThemeContextProps['theme'] | undefined => {
 	return store;
 };
 
+/**
+ * This wraps your app and provides the theme context to your app.
+ * Customize using your own settings.
+ *
+ * @param {ThemeContextProviderProps} props - Props for the ThemeProvider component.
+ * @param {ReactNode} props.children - The children of the ThemeProvider component.
+ * @param {ThemeContextProviderProps['settings']} [props.settings] - The settings for the ThemeProvider component.
+ * @example // file: main.tsx /
+ *
+ * import React from 'react';
+ * import ReactDOM from 'react-dom/client';
+ * import { ThemeProvider } from 'mantra-theme-switcher';
+ * import App from './App';
+ *
+ * // ThemeContextSettings is optional
+ * // These are the default settings
+ * const ThemeContextSettings = {
+ *   initialState: "light",
+ *   matchDevicePreference: "initialy"
+ *   savePreference: true,
+ * }
+ *
+ * ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ * 	<React.StrictMode>
+ * 		<ThemeContextProvider settings={ThemeContextSettings}>
+ * 				<App />
+ * 			</Provider>
+ * 	</React.StrictMode>
+ * );
+ * @return {JSX.Element} A JSX element with the ThemeProvider component.
+ */
 const ThemeProvider = ({ children, settings }: ThemeContextProviderProps) => {
 	if (settings) {
 		reMapSettings(settings);

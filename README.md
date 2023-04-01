@@ -13,7 +13,7 @@ npm install mantra-theme-switcher
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { ThemeProvider } from 'react-theme-switcher';
+import { ThemeProvider } from 'mantra-theme-switcher';
 import App from './App';
 
 // ThemeContextSettings is optional
@@ -38,16 +38,16 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
 ```jsx
 import React from 'react';
-import { useTheme } from 'react-theme-switcher';
+import { useTheme } from 'mantra-theme-switcher';
 
 const SomeComponent = () => {
-	const { theme, setTheme, isDark, isLight } = useTheme();
+	const { theme, toggleTheme, isDark, isLight } = useTheme();
 
 	return (
 		<div>
 			<h1>Current theme: {theme}</h1>
-			<button onClick={() => setTheme('light')}>Set theme to light</button>
-			<button onClick={() => setTheme('dark')}>Set theme to dark</button>
+			<button onClick={() => toggleTheme('light')}>Set theme to light</button>
+			<button onClick={() => toggleTheme('dark')}>Set theme to dark</button>
 			{isDark ? <p>Help it's dark in here!</p> : <p>Actually it's light!</p>}
 		</div>
 	);
