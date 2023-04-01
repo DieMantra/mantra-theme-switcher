@@ -1,6 +1,7 @@
 ## React Theme Switcher
 
 This is a simple theme switcher for React. It uses the Context API to provide a theme to the entire application.
+@example site: https://mantra-theme-switcher.vercel.app/
 
 ### Installation
 
