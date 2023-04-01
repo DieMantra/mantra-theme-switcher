@@ -1,7 +1,7 @@
 {
 	"name": "mantra-theme-switcher",
 	"repository": "diemantra/mantra-theme-switcher",
-	"version": "0.0.3",
+	"version": "0.1.0",
 	"author": "diemantra",
 	"description": "Simple react component to switch between light and dark mode",
 	"main": "lib-dist/bundle.min.js",
