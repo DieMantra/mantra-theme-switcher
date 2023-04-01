@@ -15,7 +15,7 @@
 		"preview": "vite preview"
 	},
 	"files": [
-		"dist"
+		"lib-dist"
 	],
 	"keywords": [
 		"react",
