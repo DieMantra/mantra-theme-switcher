@@ -26,7 +26,8 @@ const reMapSettings = (
 	for (const key in settings) {
 		const typedKey: keyof typeof settings = key as any;
 		if (Object.prototype.hasOwnProperty.call(settings, typedKey)) {
-			DEFAULT_SETTINGS[typedKey] = settings[typedKey] as any;
+			// cant fix this error
+			DEFAULT_SETTINGS[typedKey] = settings[typedKey] as never;
 		}
 	}
 };
